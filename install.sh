@@ -14,7 +14,7 @@ uninstall_dmrwatch4000() {
     sudo systemctl disable dmrwatch4000.service
     sudo systemctl stop dmrwatch4000.path
     sudo systemctl stop dmrwatch4000.service
-    sudo rm -vf /root/ watch-TG-4000.sh /lib/systemd/system/dmrwatch4000.{service,path}
+    sudo rm -vf /root/watch-TG-4000.sh /lib/systemd/system/dmrwatch4000.{service,path}
 }
 
 
