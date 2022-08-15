@@ -1,0 +1,13 @@
+[Unit]
+Description=dmrwatch4000.service restarter triggered by dmrwatch4000.path
+After=network.target
+StartLimitIntervalSec=10
+StartLimitBurst=5
+
+[Service]
+Type=oneshot
+ExecStart=/bin/systemctl restart dmrwatch4000.service
+
+[Install]
+WantedBy=multi-user.target
+

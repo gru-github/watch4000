@@ -1,0 +1,15 @@
+[Unit]
+Description=dmrwatch4000.service uses tail command to watch for TG4000 and uses pistar-bmapi with dropdyn&dropqso
+After=network.target
+Before=dmrgateway.service dmrwatch4000.path
+
+[Service]
+Type=simple
+WorkingDirectory=/root
+ExecStart=/root/watch-TG-4000.sh
+User=root
+Group=root
+
+[Install]
+WantedBy=multi-user.target
+

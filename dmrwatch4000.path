@@ -1,0 +1,10 @@
+[Unit]
+Description=dmrwatch4000.path executes dmrwatch4000restart.service if a change to the direcorory occurs (possible change of logfile)
+
+[Path]
+PathChanged=/var/log/pi-star
+Unit=dmrwatch4000restart.service
+
+[Install]
+WantedBy=multi-user.target
+
