@@ -18,8 +18,13 @@ uninstall_dmrwatch4000() {
 }
 
 
+if ! grep -q " / / rw," /proc/self/mountinfo
+then
+	echo "Please execute the command 'rpi-rw' first!"
+	exit
+fi
 
-rpi-rw
+
 if [ "$1" = "-u" ]
 then
     echo "UNinstalling watch4000 addon for Brandmeister connections"
@@ -30,4 +35,3 @@ else
     install_dmrwatch4000
     echo done
 fi
-rpi-ro
