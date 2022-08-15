@@ -1,8 +1,8 @@
 #!/bin/bash
 
 install_dmrwatch4000() {
-    sudo install  -g root -o root -p watch-TG-4000.sh /root
-    sudo install  -g root -o root -p dmrwatch4000.{service,path} /lib/systemd/system
+    sudo install -v -g root -o root -p watch-TG-4000.sh /root
+    sudo install -v -g root -o root -p dmrwatch4000.{service,path} /lib/systemd/system
     sudo systemctl enable dmrwatch4000.service
     sudo systemctl enable dmrwatch4000.path
     sudo systemctl start dmrwatch4000.service
@@ -14,7 +14,7 @@ uninstall_dmrwatch4000() {
     sudo systemctl disable dmrwatch4000.service
     sudo systemctl stop dmrwatch4000.path
     sudo systemctl stop dmrwatch4000.service
-    sudo rm -f /root/ watch-TG-4000.sh /lib/systemd/system/dmrwatch4000.{service,path}
+    sudo rm -vf /root/ watch-TG-4000.sh /lib/systemd/system/dmrwatch4000.{service,path}
 }
 
 
