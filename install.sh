@@ -19,6 +19,7 @@ uninstall_dmrwatch4000() {
 
 
 
+rpi-rw
 if [ "$1" = "-u" ]
 then
     echo "UNinstalling watch4000 addon for Brandmeister connections"
@@ -29,3 +30,4 @@ else
     install_dmrwatch4000
     echo done
 fi
+rpi-ro
