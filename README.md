@@ -4,6 +4,8 @@ During a running QSO TG4000 calls are not working. This software monitors the lo
 Realized by one script and 2 systemd servcices and one path watcher. The latter restarts the watcher service if a change to the pi-star log directory occurs. This might indicate a logfile change.
 
 HOWTO:
+BEFORE you install it is reommended, that you backup your SD card.
+
 Installing is easy, login to your ssh console on your raspi running pi-star 4.X:
 
 ```
