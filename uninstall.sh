@@ -1,3 +1,3 @@
 #!/bin/bash
 
-./install -u
+./install.sh -u
