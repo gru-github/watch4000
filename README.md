@@ -1,6 +1,4 @@
 # watch4000
-*** UPDATE 21-Nov-2022: Brandmeister API V1 seems offline now. The used command 'pistar-bmapi' fails with error 404.
-*** Changes for API V2 will come soon ***
 
 Addon for pi-star running on a DUPLEX (simplex not supported!) hotspot with a Brandmeister server. 
 During a running QSO TG4000 calls are not working. This software monitors the logfile for TG4000 events and calls bmapi with dropdyn and dropqso.
@@ -10,7 +8,13 @@ HOWTO:
 BEFORE you install it is recommended, that you backup your SD card.
 
 PREREQUISITES:
-You need an Brandmeister API key installed via pi-star.
+* pi-star V4 is needed.
+* You need an NEW V2 Brandmeister API key installed via pi-star.
+* Check, that /usr/local/sbin/pistar-bmapi ist at least Version 1.05:
+*        grep '# *Version' $(type -p pistar-bmapi )
+* The latest version can be found here: 
+*        https://raw.githubusercontent.com/AndyTaylorTweet/Pi-Star_Binaries_sbin/master/pistar-bmapi
+
 
 Installing is easy, login to your ssh console on your raspi running pi-star 4.X:
 
